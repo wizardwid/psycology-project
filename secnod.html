@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet">
     <title>Document</title>
+    <style>
+        /* body {
+            background-color: #ffe4ca;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        } */
+        .image-container{
+            position: relative;
+            width: 1500px;
+            height: 80px;
+        }
+        img {
+            position: absolute;
+            width: 1200px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box1{
+            position: absolute;
+            width: 450px;
+            height: 230px;
+            background-color: #ffaa55;
+            top: 150%;
+            left: 35%;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body style = " background-color: #ffe4ca;">
-    
+    <div class="image-container">
+        <img src="Q사진.png">
+    <div class="box1"></div>
 </body>
 </html>

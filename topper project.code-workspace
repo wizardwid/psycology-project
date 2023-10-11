@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "topper project",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "topper project"
+	}
+}

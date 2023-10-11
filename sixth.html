@@ -142,12 +142,72 @@
 <body style = " background-color: #ffe4ca;">
     <div class="image-container">
         <img src="Q사진.png"> 
-        <div class="image-text">친구와 영화를 보러 갈 때 무슨 장르의 영화를 볼까?</div>
+        <div class="image-text">5. 친구와 영화를 보러 갈 때 무슨 장르의 영화를 볼까?</div>
     </div>
-    <div class="boxp">사진</div>
-    <div class="box1">웃음 빵빵 흥미진진 액션코미디</div>
-    <div class="box2">2D만의 아름다움을 느끼는 애니메이션</div>
-    <div class="box3">사랑이 꽃 피어나는 로맨스</div>
-    <div class="box4">사람 사는 내음이 나는 다큐멘터리</div>
+    <div class="boxp" >사진</div>
+    <div class="box1" id="button1">웃음 빵빵 흥미진진 액션코미디</div>
+    <div class="box2" id="button2">2D만의 아름다움을 느끼는 애니메이션</div>
+    <div class="box3" id="button3">사랑이 꽃 피어나는 로맨스</div>
+    <div class="box4" id="button4">사람 사는 내음이 나는 다큐멘터리</div>
+
+    <!-- JavaScript 코드 -->
+    <script>    
+        function handleClick(score) {
+            // 현재 총 점수 가져오기
+            var currentTotal = parseInt(document.getElementById('total-score').textContent);
+            
+            // 현재 점수에 클릭한 버튼의 점수를 누적
+            var newTotal = currentTotal + score;
+            
+            // 새로운 총 점수로 업데이트
+            document.getElementById('total-score').textContent = newTotal;
+        }
+
+         // 결과에 따라 다른 창을 열기
+         if (currentTotal >= 5 && currentTotal <= 9) {
+                window.open('result1.html'); // 점수 범위에 따라 다른 결과 페이지 열기
+            } else if (currentTotal >= 10 && currentTotal <= 14) {
+                window.open('result2.html'); // 점수 범위에 따라 다른 결과 페이지 열기
+            } else if (currentTotal >= 15 && currentTotal <= 20) {
+                window.open('result3.html'); // 점수 범위에 따라 다른 결과 페이지 열기
+            }
+
+        // 버튼에 클릭 이벤트 리스너 등록
+        document.getElementById('button1').addEventListener('click', function() {
+            // 버튼 1의 점수는 1점으로 설정
+            handleClick(1);
+            score++;
+        });
+        document.getElementById('button2').addEventListener('click', function() {
+            // 버튼 2의 점수는 2점으로 설정
+            handleClick(2);
+            score + 2;
+        });
+        document.getElementById('button3').addEventListener('click', function() {
+            // 버튼 3의 점수는 3점으로 설정
+            handleClick(3);
+            score + 3;
+        });
+        document.getElementById('button4').addEventListener('click', function() {
+            // 버튼 4의 점수는 4점으로 설정
+            handleClick(4);
+            score + 4;
+        });
+
+        
+        document.getElementById('button1').addEventListener('click', function() {
+            // 다음 화면을 표시합니다.
+            window.location.href = 'third.html';
+        });
+            document.getElementById('button2').addEventListener('click', function() {
+            window.location.href = 'third.html';
+        });   
+            document.getElementById('button3').addEventListener('click', function() {
+            window.location.href = 'third.html';
+        });
+            document.getElementById('button4').addEventListener('click', function() {
+            window.location.href = 'third.html';
+        });
+    </script>
 </body>
 </html>

@@ -142,12 +142,63 @@
 <body style = " background-color: #ffe4ca;">
     <div class="image-container">
         <img src="Q사진.png"> 
-        <div class="image-text">내가 집에서 나갈 때 놓고 온 것은?</div>
+        <div class="image-text">4. 내가 집에서 나갈 때 놓고 온 것은?</div>
     </div>
     <div class="boxp">사진</div>
-    <div class="box1">정신머리</div>
-    <div class="box2">지갑, 차키 같은 고가의 물건</div>
-    <div class="box3">이어폰 같은 일상생활에 필요한 물건</div>
-    <div class="box4">서류 같은 중요한 물건</div>
+    <div class="box1" id="button1">정신머리</div>
+    <div class="box2" id="button2">지갑, 차키 같은 고가의 물건</div>
+    <div class="box3" id="button3">이어폰 같은 일상생활에 필요한 물건</div>
+    <div class="box4" id="button4">서류 같은 중요한 물건</div>
+
+     <!-- JavaScript 코드 -->
+     <script>
+        function handleClick(score) {
+            // 현재 총 점수 가져오기
+            var currentTotal = parseInt(document.getElementById('total-score').textContent);
+            
+            // 현재 점수에 클릭한 버튼의 점수를 누적
+            var newTotal = currentTotal + score;
+            
+            // 새로운 총 점수로 업데이트
+            document.getElementById('total-score').textContent = newTotal;
+        }
+
+        // 버튼에 클릭 이벤트 리스너 등록
+        document.getElementById('button1').addEventListener('click', function() {
+            // 버튼 1의 점수는 1점으로 설정
+            handleClick(1);
+            score++;
+        });
+        
+        document.getElementById('button2').addEventListener('click', function() {
+            // 버튼 2의 점수는 2점으로 설정
+            handleClick(2);
+            score + 2;
+        });
+        document.getElementById('button3').addEventListener('click', function() {
+            // 버튼 3의 점수는 3점으로 설정
+            handleClick(3);
+            score + 3;
+        });
+        document.getElementById('button4').addEventListener('click', function() {
+            // 버튼 4의 점수는 4점으로 설정
+            handleClick(4);
+            score + 4;
+        });
+        // "Start" 버튼을 클릭했을 때 다음 화면을 표시하는 함수
+        document.getElementById('button1').addEventListener('click', function() {
+            // 다음 화면을 표시합니다.
+            window.location.href = 'sixth.html';
+        });
+            document.getElementById('button2').addEventListener('click', function() {
+            window.location.href = 'sixth.html';
+        });   
+            document.getElementById('button3').addEventListener('click', function() {
+            window.location.href = 'sixth.html';
+        });
+            document.getElementById('button4').addEventListener('click', function() {
+            window.location.href = 'sixth.html';
+        });
+    </script>
 </body>
 </html>

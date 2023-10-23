@@ -27,11 +27,11 @@
         font-style: normal;
         }
         @font-face {
-        font-family: 'KBIZHanmaumGothic';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumGothic.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
         @font-face {
         font-family: 'SDMiSaeng';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
@@ -44,7 +44,11 @@
             font-weight: normal;
             font-style: normal;
         }
-        @media{
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
         body{
             display: flex;
             flex-direction: column;
@@ -67,17 +71,18 @@
         .text1{
             position: fixed;
             font-family: 'SDMiSaeng';
-            font-size: 50px;
+            font-size: 45px;
             position: relative;
             top : -630px;
+            margin: 20px;
         }
         .text2{
             position: fixed;
             font-family: 'MapoDPPA';
-            font-size: 40px;
+            font-size: 28px;
             position: relative;
             top : -620px;
-            left: -350px;
+            left: -375px;
         }
         .text3{
             position: fixed;
@@ -89,7 +94,7 @@
         .text4{
             position: fixed;
             font-family: 'MapoDPPA';
-            font-size: 40px;
+            font-size: 28px;
             position: relative;
             top : -580px;
             left: -350px;
@@ -104,10 +109,10 @@
         .text6{
             position: fixed;
             font-family: 'MapoDPPA';
-            font-size: 40px;
+            font-size: 28px;
             position: relative;
             top : -540px;
-            left: -310px;
+            left: -320px;
         }
         .text7{
             position: fixed;
@@ -122,18 +127,18 @@
         }
         .text8{
             position: fixed;
-            font-family: 'SBAggroB';
+            font-family: 'Noto Sans KR', sans-serif;
             position: relative;
-            top : -500px;
+            top : -470px;
             color: white;
             font-weight: 600;
         }
         .text9{
             position: fixed;
-            font-family: 'KBIZHanmaumGothic';
-            font-size: 100px;
+            font-family: 'SBAggroB';
+            font-size: 80px;
             position:relative;
-            top: -500px;
+            top: -470px;
             color: white;
             font-weight: 600;
         }

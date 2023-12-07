@@ -2,155 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="hippop.css">
     <title>Document</title>
-    <style>
-        @font-face {
-        font-family: 'KOHIBaeumOTF';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-        @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-        .nanumpenscript * {
-        font-family: 'Nanum Pen Script', cursive;
-        }
-        @font-face {
-        font-family: 'MapoDPPA';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-        @font-face {
-        font-family: 'LINESeedKR-Bd';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        }
-        @font-face {
-        font-family: 'SBAggroB';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-        @font-face {
-        font-family: 'SDMiSaeng';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-        @font-face {
-            font-family: 'SBAggroB';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
-}
-        body{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container{
-            position: fixed;
-            position: relative;
-            top: 100px;
-        }
-        h1{
-            position: fixed;
-            font-family: 'KOHIBaeumOTF';
-            font-size: 60px;
-            position: relative;
-            top : -630px;
-        }
-        .text1{
-            position: fixed;
-            font-family: 'SDMiSaeng';
-            font-size: 45px;
-            position: relative;
-            top : -630px;
-            margin: 20px;
-        }
-        .text2{
-            position: fixed;
-            font-family: 'MapoDPPA';
-            font-size: 28px;
-            position: relative;
-            top : -620px;
-            left: -375px;
-        }
-        .text3{
-            position: fixed;
-            font-family: 'LINESeedKR-Bd';
-            position: relative;
-            top : -610px;
-            left: -87px;
-        }
-        .text4{
-            position: fixed;
-            font-family: 'MapoDPPA';
-            font-size: 28px;
-            position: relative;
-            top : -580px;
-            left: -350px;
-        }
-        .text5{
-            position: fixed;
-            font-family: 'LINESeedKR-Bd';
-            position: relative;
-            top : -570px;
-            left: -35px;
-        }
-        .text6{
-            position: fixed;
-            font-family: 'MapoDPPA';
-            font-size: 28px;
-            position: relative;
-            top : -540px;
-            left: -320px;
-        }
-        .text7{
-            position: fixed;
-            font-family: 'LINESeedKR-Bd';
-            position: relative;
-            top : -530px;
-            left: -180px;
-        }
-        .second-container{
-            position: relative;
-            top: -290px;
-        }
-        .text8{
-            position: fixed;
-            font-family: 'Noto Sans KR', sans-serif;
-            position: relative;
-            top : -470px;
-            color: white;
-            font-weight: 600;
-        }
-        .text9{
-            position: fixed;
-            font-family: 'KBIZHanmaumGothic';
-            font-size: 93px;
-            position:relative;
-            top: -470px;
-            color: white;
-            font-weight: 600;
-        }
-    
-    </style>
 </head>
 <body style="background-color: white">
-    <div>
+        <div>
         <img src="Images/힙합.png" width="250px" height="250px"></div>
-      <div class="container">
+        <div class="container">
         <img src="Images/힙합 박스.png" width="1092.2553px" height="591.5236px">
-    </div> 
+        </div> 
         <h1>hip pop형</h1>
 
         <!-- <div class="second-container">
@@ -170,6 +30,13 @@
             <img src="Images/힙합 물결.png" width="1092.2553px" height="380px">
         </div>
         <div class="text8">나를 다시 알아볼까?</div>
-        <div class="text9">되돌아가기</div>
+        <div class="text9" id="goBackLink">되돌아가기</div>
+
+    <script>
+        document.getElementById('goBackLink').addEventListener('click', function() {
+            // 페이지 새로고침 (처음 화면으로 돌아가기)
+            window.location.href = "index.html";
+        });
+    </script>
 </body>
 </html>

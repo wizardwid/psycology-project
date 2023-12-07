@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+    .nanumpenscript * {
+    font-family: 'Nanum Pen Script', cursive;
+    }
+    @font-face {
+    font-family: 'MapoDPPA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'KBIZHanmaumGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'SBAggroB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container{
+        position: fixed;
+        position: relative;
+        top: 100px;
+    }
+    h1{
+        position: fixed;
+        font-family: 'KOHIBaeumOTF';
+        font-size: 60px;
+        position: relative;
+        top : -630px;
+    }
+    .text1{
+        position: fixed;
+        font-family: 'SDMiSaeng';
+        font-size: 50px;
+        position: relative;
+        top : -610px;
+    }
+    .text2{
+        position: fixed;
+        font-family: 'MapoDPPA';
+        font-size: 40px;
+        position: relative;
+        top : -600px;
+        left: -350px;
+    }
+    .text3{
+        position: fixed;
+        font-family: 'LINESeedKR-Bd';
+        position: relative;
+        top : -590px;
+        left: -40px;
+    }
+    .text4{
+        position: fixed;
+        font-family: 'MapoDPPA';
+        font-size: 40px;
+        position: relative;
+        top : -570px;
+        left: -350px;
+    }
+    .text5{
+        position: fixed;
+        font-family: 'LINESeedKR-Bd';
+        position: relative;
+        top : -560px;
+        left: -167px;
+    }
+    .text6{
+        position: fixed;
+        font-family: 'MapoDPPA';
+        font-size: 40px;
+        position: relative;
+        top : -530px;
+        left: -315px;
+    }
+    .text7{
+        position: fixed;
+        font-family: 'LINESeedKR-Bd';
+        position: relative;
+        top : -520px;
+        left: -25px;
+    }
+    .second-container{
+        position: relative;
+        top: -290px;
+    }
+    .text8{
+        position: fixed;
+        font-family: 'SBAggroB';
+        position: relative;
+        top : -500px;
+        color: white;
+        font-weight: 600;
+    }
+    .text9{
+        position: fixed;
+        font-family: 'KBIZHanmaumGothic';
+        font-size: 100px;
+        position:relative;
+        top: -500px;
+        color: white;
+        font-weight: 600;
+    }

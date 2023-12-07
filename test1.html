@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+
+<!-- 버튼들을 추가하고 각 버튼에 클릭 이벤트 리스너를 할당합니다. -->
+<button id="btn1">Button 1 (1 point)</button>
+<button id="btn2">Button 2 (2 points)</button>
+<button id="btn3">Button 3 (3 points)</button>
+<button id="btn4">Button 4 (4 points)</button>
+
+<!-- 결과를 표시할 창 -->
+<div id="result">누적된 값: 0</div>
+
+<script>
+    // 초기 결과 값을 localStorage에서 가져오거나 없으면 0으로 설정
+    var totalPoints = parseInt(localStorage.getItem('totalPoints')) || 0;
+
+    // 페이지 로드 시 초기 결과 창 업데이트
+    updateResult();
+
+    // 버튼1 클릭 이벤트
+    document.getElementById('btn1').addEventListener('click', function() {
+        // 1점 추가
+        totalPoints += 1;
+        // 결과 창 업데이트
+        updateResult();
+        // 다음 창으로 이동
+        openNextPage();
+    });
+
+    // 버튼2 클릭 이벤트
+    document.getElementById('btn2').addEventListener('click', function() {
+        // 2점 추가
+        totalPoints += 2;
+        // 결과 창 업데이트
+        updateResult();
+        // 다음 창으로 이동
+        openNextPage();
+    });
+
+    // 버튼3 클릭 이벤트
+    document.getElementById('btn3').addEventListener('click', function() {
+        // 3점 추가
+        totalPoints += 3;
+        // 결과 창 업데이트
+        updateResult();
+        // 다음 창으로 이동
+        openNextPage();
+    });
+
+    // 버튼4 클릭 이벤트
+    document.getElementById('btn4').addEventListener('click', function() {
+        // 4점 추가
+        totalPoints += 4;
+        // 결과 창 업데이트
+        updateResult();
+        // 다음 창으로 이동
+        openNextPage();
+    });
+
+    // 결과를 업데이트하는 함수
+    function updateResult() {
+        // 결과 창에 현재 누적된 값을 표시
+        document.getElementById('result').innerText = '누적된 값: ' + totalPoints;
+        // localStorage에 누적된 값을 저장
+        localStorage.setItem('totalPoints', totalPoints.toString());
+    }
+
+    // 다음 창으로 이동하는 함수
+    function openNextPage() {
+        // 현재 창에서 새로운 창 열기
+        var newWindow = window.open('test2.html', '_blank');
+        // 누적된 값을 새로운 창으로 전달
+        if (newWindow) {
+            newWindow.postMessage({ totalPoints: totalPoints }, window.location.origin);
+        }
+    }
+</script>
+</body>
+</html>

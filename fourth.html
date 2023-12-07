@@ -2,146 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesheet">
+    <link rel="stylesheet" href="fourth.css">
     <title>Document</title>
-    <style>
-       @font-face {
-        font-family: 'BMHANNAPro';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }   
-        /* body {
-            background-color: #ffe4ca;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        } */
-        .image-container{
-            position: relative;
-            width: 1500px;
-            height: 80px;
-        }
-        img {
-            position: absolute;
-            width: 1200px;
-            height: 100px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            
-        }
-        .image-text {
-            position: relative;
-            top: 50%;
-            left: 66%;
-            transform: translate(-50%, -50%);
-            font-size: 28px; /* Increase the font size */
-            color: black;
-            font-family: 'BMHANNAPro';
-        }
-        .boxp{
-            position: absolute;
-            width: 450px;
-            height: 230px;
-            background-color: #ffaa55;
-            top: 18%;
-            left: 35%;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            text-align: center;
-            color: black;
-            font-family: 'BMHANNAPro';
-       
-        }
-        .box1{
-            position: absolute;
-            width : 700px;
-            height : 60px;
-            background-color: #ffc392;
-            top: 56%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            border-radius: 20px;
-            box-shadow: 6px 6px 6px #ffaa55;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            text-align: center;
-            color:  black;
-            font-family: 'BMHANNAPro';
-           
-        }
-       .box2{
-            position: absolute;
-            width : 700px;
-            height : 60px;
-            background-color: #ffc392;
-            top: 66%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            border-radius: 20px;
-            box-shadow: 6px 6px 6px #ffaa55;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            text-align: center;
-            color: black;
-            font-family: 'BMHANNAPro';
-          
-        }
-        .box3{
-            position: absolute;
-            width : 700px;
-            height : 60px;
-            background-color: #ffc392;
-            top: 76%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            border-radius: 20px;
-            box-shadow: 6px 6px 6px #ffaa55;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            text-align: center;
-            color: black;
-            font-family: 'BMHANNAPro';
-          
-        }
-        .box4{
-            position: absolute;
-            width : 700px;
-            height : 60px;
-            background-color: #ffc392;
-            top: 86%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            border-radius: 20px;
-            box-shadow: 6px 6px 6px #ffaa55;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            text-align: center;
-            color: black;
-            font-family: 'BMHANNAPro';
-
-        }
-        
-    </style>
 </head>
 <body style = " background-color: #ffe4ca;">
     <div class="image-container">
-        <img src="Q사진.png"> 
+        <img src="Images/Q사진.png"> 
         <div class="image-text">3.놀이공원에서 제일 타고싶은 놀이기구는?</div>
     </div>
     <div class="boxp">사진</div>
@@ -152,53 +18,76 @@
 
     <!-- JavaScript 코드 -->
     <script>
-        function handleClick(score) {
-            // 현재 총 점수 가져오기
-            var currentTotal = parseInt(document.getElementById('total-score').textContent);
-            
-            // 현재 점수에 클릭한 버튼의 점수를 누적
-            var newTotal = currentTotal + score;
-            
-            // 새로운 총 점수로 업데이트
-            document.getElementById('total-score').textContent = newTotal;
+        // 초기 결과 값을 localStorage에서 가져오거나 없으면 0으로 설정
+        var totalPoints = parseInt(localStorage.getItem('totalPoints')) || 0;
+
+        // 페이지 로드 시 초기 결과 창 업데이트
+        updateResult();
+
+        // 버튼1 클릭 이벤트
+        document.getElementById('button1').addEventListener('click', function() {
+            // 1점 추가
+            totalPoints += 1;
+            // 결과 창 업데이트
+            updateResult();
+        });
+
+        // 버튼2 클릭 이벤트
+        document.getElementById('button2').addEventListener('click', function() {
+            // 2점 추가
+            totalPoints += 2;
+            // 결과 창 업데이트
+            updateResult();
+        });
+
+        // 버튼3 클릭 이벤트
+        document.getElementById('button3').addEventListener('click', function() {
+            // 3점 추가
+            totalPoints += 3;
+            // 결과 창 업데이트
+            updateResult();
+        });
+
+        // 버튼4 클릭 이벤트
+        document.getElementById('button4').addEventListener('click', function() {
+            // 4점 추가
+            totalPoints += 4;
+            // 결과 창 업데이트
+            updateResult();
+        });
+
+        // 결과를 업데이트하는 함수
+        function updateResult() {
+            // 결과 창에 현재 누적된 값을 표시
+            var resultElement = document.getElementById('result');
+            if (resultElement) {
+                resultElement.innerText = '누적된 값: ' + totalPoints;
+            }
+
+            // 콘솔 창에 누적된 값을 출력
+            console.log('누적된 값:', totalPoints);
+
+            // localStorage에 누적된 값을 저장
+            localStorage.setItem('totalPoints', totalPoints.toString());
+
         }
 
-        // 버튼에 클릭 이벤트 리스너 등록
-        document.getElementById('button1').addEventListener('click', function() {
-            // 버튼 1의 점수는 1점으로 설정
-            handleClick(1);
-            score++;
-        });
-        document.getElementById('button2').addEventListener('click', function() {
-            // 버튼 2의 점수는 2점으로 설정
-            handleClick(2);
-            score + 2;
-        });
-        document.getElementById('button3').addEventListener('click', function() {
-            // 버튼 3의 점수는 3점으로 설정
-            handleClick(3);
-            score + 3;
-        });
-        document.getElementById('button4').addEventListener('click', function() {
-            // 버튼 4의 점수는 4점으로 설정
-            handleClick(4);
-            score + 4;
-        });
-        
-        // "Start" 버튼을 클릭했을 때 다음 화면을 표시하는 함수
-        document.getElementById('button1').addEventListener('click', function() {
-            // 다음 화면을 표시합니다.
+        document.getElementById('button1').addEventListener('click', function () {
             window.location.href = 'fifth.html';
         });
-            document.getElementById('button2').addEventListener('click', function() {
-            window.location.href = 'fifth.html';
-        });   
-            document.getElementById('button3').addEventListener('click', function() {
+
+        document.getElementById('button2').addEventListener('click', function () {
             window.location.href = 'fifth.html';
         });
-            document.getElementById('button4').addEventListener('click', function() {
+
+        document.getElementById('button3').addEventListener('click', function () {
             window.location.href = 'fifth.html';
         });
+        document.getElementById('button4').addEventListener('click', function () {
+            window.location.href = 'fifth.html';
+        });
+
     </script>
+
 </body>
 </html>

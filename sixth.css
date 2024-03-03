@@ -17,7 +17,7 @@
         width: 1500px;
         height: 80px;
     }
-    img {
+    .Que img {
         position: absolute;
         width: 1200px;
         height: 100px;
@@ -35,23 +35,14 @@
         color: black;
         font-family: 'BMHANNAPro';
     }
-    .boxp{
+    .cinema img{
         position: absolute;
-        width: 450px;
-        height: 230px;
-        background-color: #ffaa55;
-        top: 18%;
-        left: 35%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        text-align: center;
-        color: black;
-        font-family: 'BMHANNAPro';
-   
+        width: 500px;
+        height: 250px;
+        top: 125px;
+        left: 500px;
+        border-radius: 10px;
+        opacity: 0.8;
     }
     .box1{
         position: absolute;

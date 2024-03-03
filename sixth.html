@@ -8,10 +8,14 @@
 </head>
 <body style = " background-color: #ffe4ca;">
     <div class="image-container">
-        <img src="Images/Q사진.png"> 
+        <div class="Que">
+            <img src="Images/Q사진.png">
+        </div>  
         <div class="image-text">5. 친구와 영화를 보러 갈 때 무슨 장르의 영화를 볼까?</div>
     </div>
-    <div class="boxp" >사진</div>
+    <div class="cinema">
+        <img src="Images/영화관.jpg">
+    </div>
     <div class="box1" id="button1">웃음 빵빵 흥미진진 액션코미디</div>
     <div class="box2" id="button2">2D만의 아름다움을 느끼는 애니메이션</div>
     <div class="box3" id="button3">사랑이 꽃 피어나는 로맨스</div>
@@ -21,42 +25,10 @@
     <script>    
         // 초기 결과 값을 localStorage에서 가져오거나 없으면 0으로 설정
         var totalPoints = parseInt(localStorage.getItem('totalPoints')) || 0;
-
+    
         // 페이지 로드 시 초기 결과 창 업데이트
         updateResult();
-
-        // 버튼1 클릭 이벤트
-        document.getElementById('button1').addEventListener('click', function() {
-            // 1점 추가
-            totalPoints += 1;
-            // 결과 창 업데이트
-            updateResult();
-        });
-
-        // 버튼2 클릭 이벤트
-        document.getElementById('button2').addEventListener('click', function() {
-            // 2점 추가
-            totalPoints += 2;
-            // 결과 창 업데이트
-            updateResult();
-        });
-
-        // 버튼3 클릭 이벤트
-        document.getElementById('button3').addEventListener('click', function() {
-            // 3점 추가
-            totalPoints += 3;
-            // 결과 창 업데이트
-            updateResult();
-        });
-
-        // 버튼4 클릭 이벤트
-        document.getElementById('button4').addEventListener('click', function() {
-            // 4점 추가
-            totalPoints += 4;
-            // 결과 창 업데이트
-            updateResult();
-        });
-
+    
         // 결과를 업데이트하는 함수
         function updateResult() {
             // 결과 창에 현재 누적된 값을 표시
@@ -64,26 +36,65 @@
             if (resultElement) {
                 resultElement.innerText = '누적된 값: ' + totalPoints;
             }
-
+    
             // 콘솔 창에 누적된 값을 출력
             console.log('누적된 값:', totalPoints);
-
+    
             // localStorage에 누적된 값을 저장
             localStorage.setItem('totalPoints', totalPoints.toString());
-
+    
         }
         
+        // 버튼 클릭 이벤트 리스너 추가
+        document.getElementById('button1').addEventListener('click', function() {
+            // 1점 추가
+            totalPoints += 1;
+            // 결과 창 업데이트
+            updateResult();
+            // 리다이렉션
+            redirectBasedOnTotalPoints();
+        });
+    
+        document.getElementById('button2').addEventListener('click', function() {
+            // 2점 추가
+            totalPoints += 2;
+            // 결과 창 업데이트
+            updateResult();
+            // 리다이렉션
+            redirectBasedOnTotalPoints();
+        });
+    
+        document.getElementById('button3').addEventListener('click', function() {
+            // 3점 추가
+            totalPoints += 3;
+            // 결과 창 업데이트
+            updateResult();
+            // 리다이렉션
+            redirectBasedOnTotalPoints();
+        });
+    
+        document.getElementById('button4').addEventListener('click', function() {
+            // 4점 추가
+            totalPoints += 4;
+            // 결과 창 업데이트
+            updateResult();
+            // 리다이렉션
+            redirectBasedOnTotalPoints();
+        });
+    
         // 결과에 따라 다른 창을 열기
-         if ( totalPoints>= 4 && totalPoints <= 7) {
+        function redirectBasedOnTotalPoints() {
+            if (totalPoints >= 5 && totalPoints <= 7) {
                 window.location.href = 'k-pop.html';
             } else if (totalPoints >= 8 && totalPoints <= 10) {
                 window.location.href = 'hippop.html';
             } else if (totalPoints >= 11 && totalPoints <= 13) {
                 window.location.href = 'ballad.html';
-            }
-            else{
+            } else {
                 window.location.href = 'classic.html';
             }
+        }
     </script>
+    
 </body>
 </html>

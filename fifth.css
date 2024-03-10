@@ -39,7 +39,7 @@
         width: 500px;
         height: 250px;
         top: 125px;
-        left: 500px;
+        left: 525px;
         border-radius: 10px;
         opacity: 0.8;
     }
@@ -119,4 +119,6 @@
         font-family: 'BMHANNAPro';
 
     }
+
+    body{ overflow-x: hidden; overflow-y: auto;}
     

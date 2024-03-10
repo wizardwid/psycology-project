@@ -55,3 +55,7 @@ container {
 h1{
     font-family: 'BMHANNAPro';
 }
+
+body{ overflow-y: auto;
+    overflow-y: scroll;
+    overflow-y: hidden;}
